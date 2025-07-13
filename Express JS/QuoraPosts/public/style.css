@@ -1,0 +1,15 @@
+.post
+{
+    padding: 50px;
+    background-color: antiquewhite;
+    margin: 30px;
+}
+.user
+{
+    font-style: italic;
+    font-size: 15px;
+}
+.content
+{
+    font-size: 25px;
+}
