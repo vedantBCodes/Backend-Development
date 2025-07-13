@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New User</title>
+    <style>
+        body
+        {
+            background-color: aliceblue;
+        }
+        .formContainer {
+            margin: 20px 50px;
+            width: 400px;
+            padding: 10px 20px 20px 30px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+        }
+
+        input,
+        textarea {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px black;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+        }
+    </style>
 </head>
+
 <body>
-    <form action="/posts" method="post">
-        <input type="text" placeholder="Username" name="username"> <br> <br>
-        <textarea name="content" id="" placeholder="Add content"></textarea> <br> <br>
-        <button>Submit</button>
-    </form>
+    <div class="formContainer">
+        <h1>Add your new Post</h1>
+        <form action="/posts" method="post">
+            <label for="username">Enter your Username :</label>
+            <input type="text" placeholder="Username" name="username" id="username" required> <br> <br>
+            <label for="content">Add your Content :</label> <br> <br>
+            <textarea name="content" id="" placeholder="Add content" id="content" required></textarea> <br> <br>
+            <button>Submit</button> &nbsp;&nbsp;
+            <button><a href="/posts" style="color: white;text-decoration: none;">cancel</a></button>
+        </form>
+    </div>
 </body>
+
 </html>

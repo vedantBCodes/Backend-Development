@@ -11,18 +11,22 @@ app.get("/",(req,res)=>{
 });
 let posts = [
     {
+        id:"1a",
         username : "Vedant",
         content : "I Love Coding"
     },
      {
+        id:"2b",
         username : "Prithvi",
         content : "I hate Coding"
     },
     {
+        id:"3c",
         username : "Suraj",
         content : "I just got my 1st internship"
     },
     {
+        id:"4d",
         username : "Amruta",
         content : "I don't like to study"
     },
@@ -41,6 +45,13 @@ app.post("/posts", (req, res) => {
     res.redirect("/posts");
 });
 
+app.get("/posts/:id",(req,res)=>{
+    let { id } = req.params;
+    let post = posts.find((p)=> id == p.id);
+    // console.log(post);
+    res.render("showPost",{post});
+    // res.send("request accepted");
+});
 
 app.listen(3000,()=>{
 console.log("App is listening on port 3000");
