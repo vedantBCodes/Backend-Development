@@ -3,11 +3,10 @@
     padding: 20px 50px;
     background-color: antiquewhite;
     margin: 30px;
-    width: 400px;
+    width: 500px;
 }
 .user
 {
-    font-style: italic;
     font-size: 24px;
 }
 .content
@@ -20,4 +19,13 @@ body{
     flex-direction: row;
     justify-content: center;
     
+}
+a {
+  color: blue; /* or whatever default color you want */
+  text-decoration: none;
+  font-size: 22px;
+}
+
+a:visited {
+  color: blue; /* same as default to prevent color change */
 }

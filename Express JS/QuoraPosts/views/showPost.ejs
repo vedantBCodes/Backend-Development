@@ -10,8 +10,9 @@
     <div class="post">
         <h1>Here is your post in detail </h1>
             <div style="font-size: 20px;">Post ID :<%= post.id %> </div> <br>
-            <div class="user">Username : @<%= post.username %></div>
-            <div class="content">Content : <%= post.content %></div>
+            <div class="user">Username :  <span style="font-style: italic;">@<%= post.username %></span></div>
+            <div class="content">Content : <%= post.content %></div> <br>
+            <button><a href="/posts">see all posts</a></button>
     </div>
 </body>
 </html>

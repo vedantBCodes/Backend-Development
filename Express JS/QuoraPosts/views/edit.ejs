@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <style>
+        body
+        {
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: row;
+         justify-content: center;
+        }
+        .editContainer
+        {
+            padding: 20px 30px;
+            background-color: antiquewhite;
+            margin: 30px;
+        }
+        textarea {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px black;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+        }
+        textarea:focus {
+            outline: none;
+        }
+        h1
+        {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="editContainer">
+    <h1>Edit your post</h1>
+    <div style="font-size: 25px;">Post ID : <%= post.id %></div>
+     <div style="font-size: 25px;">Username :<span style="font-style: italic;">@<%= post.username %></span></div> <br>
+     <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <label for="">Edit your content :</label> <br> <br>
+     <textarea name="content" rows="5" cols="30"><%= post.content %></textarea> <br> <br>
+     <button>Submit</button>
+     </form>
+    </div>
+</body>
+</html>

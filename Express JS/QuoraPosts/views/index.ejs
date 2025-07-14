@@ -12,12 +12,17 @@
     <% for (let post of posts)
     { %>
         <div class="post">
-            <div class="user">Username : @<%= post.username %></div>
-            <div class="content">Content : <%= post.content %></div>
+            <div class="user">Username : <span style="font-style: italic;">@<%= post.username %></span></div>
+            <div class="content">Content : <%= post.content %></div> <br>
+            <a href="/posts/<%=post.id%>" >see in detail</a> &nbsp; &nbsp;
+            <a href="/posts/<%=post.id%>/edit" >edit your post</a>
+
         </div>
     <% } %>
    
-    <button style="color: blue; margin-bottom : 30px; margin-left : 30px;"><a href="/posts/new">Add new Posts</a></button>
+<button style="display: block; margin: 30px auto; color: blue;">
+  <a href="/posts/new">Add new Posts</a>
+</button>
     </div>
 </body>
 </html>
