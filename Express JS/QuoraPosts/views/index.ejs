@@ -15,7 +15,10 @@
             <div class="user">Username : <span style="font-style: italic;">@<%= post.username %></span></div>
             <div class="content">Content : <%= post.content %></div> <br>
             <a href="/posts/<%=post.id%>" >see in detail</a> &nbsp; &nbsp;
-            <a href="/posts/<%=post.id%>/edit" >edit your post</a>
+            <a href="/posts/<%=post.id%>/edit" >edit</a> &nbsp; &nbsp;
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                <button>Delete Post</button>
+            </form>
 
         </div>
     <% } %>
