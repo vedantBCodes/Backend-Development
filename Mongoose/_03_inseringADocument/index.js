@@ -34,4 +34,4 @@ student1.save()
 })
 .catch((err)=>{
     console.log("Error while saving ", err);
-});
+})
